@@ -16,8 +16,8 @@ dotenv.config()
 const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(cors({
-    origin: "https://ai-ticket-frontend-rho.vercel.app/",
-    credentials: true
+  origin: "https://ai-ticket-frontend-rho.vercel.app",
+  methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
 }));
 app.use(express.json());
 
