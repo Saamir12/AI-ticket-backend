@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "concurrently \"npx inngest-cli dev\" \"nodemon index.js\""
-  },
+ "scripts": {
+  "dev": "concurrently --kill-others-on-fail \"npx inngest-cli dev\" \"nodemon index.js\"",
+  "start": "node index.js"
+}
+,
   "type": "module",
   "keywords": [],
   "author": "",
